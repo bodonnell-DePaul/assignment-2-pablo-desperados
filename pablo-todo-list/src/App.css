@@ -1,0 +1,14 @@
+.todo-form-container {
+  background-color: #00ff88; 
+  padding: 20px;
+  border-radius: 10px;      
+  margin-bottom: 20px;
+}
+
+.formLabel {
+  width: 100%;
+  display: inline-block;
+}
+.btn-primary{
+  margin-top: 20px;
+}
