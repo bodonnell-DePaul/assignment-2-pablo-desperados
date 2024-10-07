@@ -12,6 +12,7 @@ function App() {
   const [tasks, setTasks] = useState(todos);
 
   const uploadTask =(newTask)=>{
+    newTask={...newTask, description:"PLACEHOLDER"};
     setTasks([...tasks, newTask]);
   }
 

@@ -30,7 +30,7 @@ const ToDoList = ({ updateDate,tasks }) => {
                             <ListGroup.Item
                                 key={index}
                                 action
-                                variant={judgeColor(task.dueDate)}
+                                className={`list-group-item-${judgeColor(task.dueDate)}`}
                                 href={`#todo${index + 1}`}
                             >
                                 {task.title}
@@ -43,7 +43,7 @@ const ToDoList = ({ updateDate,tasks }) => {
                     <Tab.Content>
                         {tasks.map((task, index) => (
                             <Tab.Pane contentEditable eventKey={`#todo${index + 1}`} key={index}>
-                                <h4>{task.title}</h4>
+                                <p>{task.description}</p>
                                 <input type="date" onChange={(e) => updateDate(index, e.target.value)} value={task.dueDate}/>
                             </Tab.Pane>
                         ))}
