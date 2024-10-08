@@ -27,14 +27,12 @@ export default function ToDoForm({uploadTask}) {
                         <Form.Control type="text" placeholder='Add todo item' value={title} onChange={(e) => setTitle(e.target.value)}></Form.Control>
                     </Row>
                 </Form.Group>
-
-                <br></br>
                 <Form.Group>
                     <Row>
-                        <Form.Label className='formLabel'>Due Date</Form.Label>
+                        <Form.Label aria-labelledby='false' className='formLabel'>Due Date</Form.Label>
                     </Row>
                     <Row>
-                        <Form.Control type="date" placeholder='Due Date' value={dueDate} onChange={(e) => setDueDate(e.target.value)}></Form.Control>
+                    <Form.Control type="date" placeholder='Due Date' value={dueDate} onChange={(e) => setDueDate(e.target.value)}></Form.Control>
                     </Row>
                 </Form.Group>
                 <Button variant="primary" type="submit">

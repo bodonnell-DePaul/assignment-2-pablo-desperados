@@ -1,6 +1,7 @@
 import { Tab, Row, Col, ListGroup } from 'react-bootstrap'
+import React, { useState } from 'react';
 
-const ToDoList = ({ updateDate,tasks }) => {
+const TodoList = ({ updateDate,tasks }) => {
 
     const judgeColor = (date) => {
         const today = new Date();
@@ -26,7 +27,7 @@ const ToDoList = ({ updateDate,tasks }) => {
                 <Col sm={4}>
                     <ListGroup>
 
-                        {tasks.map((task, index) => (
+                        {tasks?.map((task, index) => (
                             <ListGroup.Item
                                 key={index}
                                 action
@@ -41,7 +42,7 @@ const ToDoList = ({ updateDate,tasks }) => {
                 </Col>
                 <Col sm={8}>
                     <Tab.Content>
-                        {tasks.map((task, index) => (
+                        {tasks?.map((task, index) => (
                             <Tab.Pane contentEditable eventKey={`#todo${index + 1}`} key={index}>
                                 <p>{task.description}</p>
                                 <input type="date" onChange={(e) => updateDate(index, e.target.value)} value={task.dueDate}/>
@@ -55,5 +56,5 @@ const ToDoList = ({ updateDate,tasks }) => {
 
 }
 
-export default ToDoList;
+export default TodoList;
 

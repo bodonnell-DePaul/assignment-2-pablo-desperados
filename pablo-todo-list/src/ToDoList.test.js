@@ -1,5 +1,5 @@
 import { render, screen, fireEvent } from '@testing-library/react';
-import TodoList from './pablo-todo-list';
+import TodoList from './App';
 
 describe('TodoList Component', () => {
   test('renders without crashing', () => {
@@ -8,7 +8,7 @@ describe('TodoList Component', () => {
 
   test('renders the title', () => {
     render(<TodoList />);
-    const titleElement = screen.getByText(/Assignment 2: ToDo List/i);
+    const titleElement = screen.getByText("Assignment 2: Pablo's ToDo List");
     expect(titleElement).toBeInTheDocument();
   });
 

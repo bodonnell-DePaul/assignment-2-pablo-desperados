@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import './App.css';
 import './components/ToDoForm'
 import ToDoForm from './components/ToDoForm';
-import ToDoList from './components/ToDoList';
+import TodoList from './components/TodoList.js';
 import { Container, Row, Col } from 'react-bootstrap';
 import {todos} from './todoItems.js'
 import 'bootstrap/dist/css/bootstrap.min.css';
@@ -18,7 +18,7 @@ function App() {
 
   const updateDate =(selectedIndex,newDate)=>{
     if(selectedIndex && newDate){
-      const selectedTasks = tasks.map((task, index)=>{
+      const selectedTasks = tasks?.map((task, index)=>{
         if (index == selectedIndex){
           return {...task, dueDate: newDate }
         }else{
@@ -38,7 +38,7 @@ function App() {
           </div>
         </Col>
         <Col sm={8}>
-          <ToDoList updateDate={updateDate} tasks={tasks}/>
+          <TodoList updateDate={updateDate} tasks={tasks}/>
         </Col>
       </Row>
 
