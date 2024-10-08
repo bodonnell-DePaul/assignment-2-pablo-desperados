@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './App.css';
-import './components/ToDoForm'
-import ToDoForm from './components/ToDoForm';
+import './components/ToDoForm.js'
+import ToDoForm from './components/ToDoForm.js';
 import TodoList from './components/TodoList.js';
 import { Container, Row, Col } from 'react-bootstrap';
 import {todos} from './todoItems.js'
